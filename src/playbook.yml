@@ -1,0 +1,9 @@
+---
+- name: Lab6 - nginx via role
+  hosts: web
+  remote_user: runner
+  become: true
+  gather_facts: false
+
+  roles:
+    - nginx

@@ -1,0 +1,20 @@
+---
+- name: Install nginx
+  ansible.builtin.apt:
+    name: nginx
+    state: present
+    update_cache: yes
+
+- name: Copy index.html to nginx web root
+  ansible.builtin.copy:
+    src: index.html
+    dest: /var/www/html/index.html
+    owner: www-data
+    group: www-data
+    mode: "0644"
+
+- name: Ensure nginx started and enabled
+  ansible.builtin.systemd:
+    name: nginx
+    state: started
+    enabled: true

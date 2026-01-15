@@ -1,0 +1,15 @@
+
+PLAY [Lab6 - nginx via role] ***************************************************
+
+TASK [nginx : Install nginx] ***************************************************
+ok: [10.0.2.16]
+
+TASK [nginx : Copy index.html to nginx web root] *******************************
+ok: [10.0.2.16]
+
+TASK [nginx : Ensure nginx started and enabled] ********************************
+ok: [10.0.2.16]
+
+PLAY RECAP *********************************************************************
+10.0.2.16                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
